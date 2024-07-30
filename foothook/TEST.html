@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+	
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color: black;
+}
+
+.name_and_date{ 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.post{
+	background-color: white;
+    padding: 25px 80px;
+    text-align: justify;
+    width: 36em;
+    max-width: 100%;
+	border: thin solid #000000;
+	margin-bottom: 30px
+}
+.name{
+	display: flex;
+  	justify-content: flex-start;
+	align-items: center;
+}
+.username{
+	margin-left: 20px;
+	color:deepskyblue;
+}
+.date_time{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.pfp{
+	border-radius: 25%;
+	margin-right: 10px;
+}
+.upvote:hover{
+	background-color: #7C7C7C;
+}
+.upvote:active{
+	background-color: orange;
+}
+.upvote {
+	position: relative;
+	background-color: grey;
+	text-align: left;
+}
+.upvote:before,
+.upvote:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.upvote,
+.upvote:before,
+.upvote:after {
+	width:  0.5em;
+	height: 0.5em;
+	border-top-right-radius: 30%;
+}
+
+.upvote {
+	transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.upvote:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.upvote:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+.upvote-downvote{
+	float: left;
+	width: 20%
+}
+.content{
+	float: left;
+}
+	</style>
+<body>
+<div class ="main">
+	<div id="post" class="post">
+					<div class = "upvote_downvote">
+						<div id = "upvote" class = "upvote">
+							<div class="upvote_arrow_tip"></div>
+
+						</div>
+						<div class = "score">
+							<p>1</p>
+						</div>
+						<div class = "downvote">
+							<div class="downvote_arrow_tip"></div>
+
+						</div>
+					</div>
+					<div class = "content">
+						<a class = "name_and_date">
+							<spam class="name">
+								<img class = "pfp" width = "30" height = "30" src="" alt="pfp">
+								<h3 class="first_last_name">FIRST NAME LAST NAME</h3>
+								<p class = "username">@USERNAME</p>
+							</spam>
+							<i class="date_time">DATE &nbsp&nbsp&nbsp&nbsp TIME</i>
+						</a>
+						<p class = "contents">POST CONTENTS</p>
+					</div>
+				</div>
+	</div>
+</body>
+</html>

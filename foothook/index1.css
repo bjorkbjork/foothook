@@ -1,0 +1,661 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: "Segoe UI",Arial,sans-serif;
+	color: black;
+	background-color: #e6ecf0;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar{
+	float:left;
+	display: inline-block;
+	padding: 50px;
+}
+.posts{
+	display: inline-block;
+	width: 100%;
+}
+.name_and_date{ 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.post{
+	background-color: white;
+    padding: 10px 60px;
+    text-align: justify;
+    width: 36em;
+    max-width: 100%;
+	margin: auto;
+	border: thin solid #BDBDBD;
+	border-bottom-color: #DDDDDD;
+	border-top-color: #DDDDDD;
+/*	margin-bottom: 30px;*/
+	clear: both;
+}
+/*
+.post:hover{
+	opacity: 0.8;
+}
+*/
+.name{
+	display: flex;
+  	justify-content: flex-start;
+	align-items: center;
+}
+.username{
+	margin-left: 20px;
+	color:deepskyblue;
+}
+.date_time{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-left: 30px;
+	float:right;
+}
+.pfp{
+	border-radius: 25%;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.pfp_div{
+	float:left; 
+	height: 100%
+}
+.upvote:hover{
+	background-color: #A3A2A2;
+}
+.upvote {
+	position: relative;
+	background-color: grey;
+	text-align: left;
+}
+.upvote:before,
+.upvote:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.upvote,
+.upvote:before,
+.upvote:after {
+	width:  0.5em;
+	height: 0.5em;
+	border-top-right-radius: 30%;
+}
+
+.upvote {
+	transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.upvote:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.upvote:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+.downvote:hover{
+	background-color: #A3A2A2;
+}
+.downvote {
+	position: relative;
+	background-color: grey;
+	text-align: left;
+}
+.downvote:before,
+.downvote:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.downvote,
+.downvote:before,
+.downvote:after {
+	width:  0.5em;
+	height: 0.5em;
+	border-top-right-radius: 30%;
+}
+
+.downvote {
+	transform: rotate(0deg) skewX(-30deg) scale(1,.866);
+	margin-left: 3px;
+}
+.downvote:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.downvote:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+.share_and_comment{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: grey;
+}
+.share{
+	display: inline-block;
+	float: left;
+	padding-right: 15px;
+}
+.commentBTN{
+	display: inline-block;
+	float: right;
+	padding-left: 15px;
+}
+
+.trending-post{
+	border: thin solid #000000;
+	margin-bottom: 30px;
+	padding: 25px 40px;
+	background-color: #fff;
+}
+.name_date{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.trend_username{
+	color:deepskyblue;
+	margin-top: -20px;
+}
+.trend_date{
+	margin-top: 25px;
+	margin-left: 20px;
+}
+
+.upvote_downvote{
+	float: left;
+	padding-top: 20px;
+}
+
+.content{
+	margin-left: 4.5%;
+}
+.content-comment{
+	margin-left: 4.5%;
+	border-bottom: solid thin lightgrey; 
+	padding:0;
+	margin-top: -10px;
+}
+.content-comment:last-child{
+	border:none;f
+}
+.trending-h1{
+	font-size: 20px;
+}
+
+.navbar{
+	max-width: 100%;
+	height: 50px;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: thin solid grey;
+	margin-bottom: 20px;
+	padding: 10px;
+	margin-top: -27.3px;
+	z-index: 1;
+}
+.left_buttons{
+	display: flex;
+	justify-content: space-between;
+	margin-left: 50px;
+	align-items: center;
+	margin-bottom: -5px;
+}
+.right_buttons{
+	display: flex;
+	justify-content: space-between;
+	margin-right: 55px;
+	align-items: center;
+}
+.logo{
+	height: 25.6px;
+	width: 25.6px;
+	border-radius: 25%;
+	display: block;
+	margin: auto;
+	z-index: 2;
+	position: sticky;
+	top: 20px;
+}
+.button{
+	padding: 20px;
+	color: grey;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 1px deepskyblue solid;
+	
+}
+.button:hover{
+	color: deepskyblue;
+	border-bottom: 2px deepskyblue solid;
+}
+.button_main{
+	color: deepskyblue;
+	border-bottom: 2px deepskyblue solid;
+}
+.score{
+
+}
+.commentBTN_img{
+	width: 25.6px;
+	height: 25.6px;
+}
+.commentBTN:focus,
+.commentBTN:hover{
+	color: deepskyblue;
+	cursor: pointer;
+}
+.share:focus,
+.share:hover{
+	color: deepskyblue;
+	cursor: pointer;
+}
+/*
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.modal_content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+*/
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 36em; /* Could be more or less, depending on screen size */
+  padding: 0;
+  border-radius: 8px;
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+/*
+  position: fixed;
+  right: 25px;
+  top: 0; 
+*/
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  display: inline-block;
+}
+.close1 {
+  /* Position it in the top right corner outside of the modal */
+  position: fixed;
+  right: 25px;
+  top: 0; 
+  color: #fff;
+  font-size: 35px;
+/*  font-weight: bold;*/
+  display: inline-block;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.close1:hover,
+.close1:focus {
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+/* Full-width input fields */
+input[type=text], input[type=textarea] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.input {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.slid {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slid:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slid {
+  background-color: #2196F3;
+}
+
+input:focus + .slid {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slid:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slid.round {
+  border-radius: 34px;
+}
+
+.slid.round:before {
+  border-radius: 50%;
+}
+/* Set a style for all buttons */
+button {
+  background-color: deepskyblue;
+  color: white;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 25px;
+  float: right;
+	
+}
+
+button:hover {
+  opacity: 1;
+}
+.button1 {
+  background-color: deepskyblue;
+  color: white;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 25px;
+  float: right;
+}
+
+.button1:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.cmt_header{
+	text-align: center;
+	display: inline-block;
+	width: 22.7em;
+}
+.lower_half{
+	background-color: #E2FBFF;
+	overflow: auto;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.cmt_head{
+	border-bottom: thin solid #BDBDBD;
+	padding-bottom: 25px;
+	width: 100%;
+	padding-top: 5px;
+}
+.contents{
+	margin-top: -12px;
+}
+.username_modal{
+	color: deepskyblue; 
+	display:inline-block;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+	width: auto;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-left: -190px;
+  margin-top: 13px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  width: auto;
+	overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-contenta {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-contentp {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-contenth2 {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display: inline-block;}
+
+.search{
+	height: 26px; 
+	width: 26px; 
+	border-radius: 0px; 
+	border-top-right-radius: 8px; 
+	border-bottom-right-radius: 8px;
+	padding: 0;
+}
+
+.comment{
+	max-height: 300px;
+	overflow-y: auto;
+}
+.comment:last-child{
+	border:none;
+}
+
+.left_buttons{
+	font-weight: bold;
+}
